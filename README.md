@@ -36,11 +36,6 @@ fileLanguage('.file.tar');         //=> 'tar'
 // Or with case preserved
 fileLanguage('.Vagrantfile', {preserveCase: true}); //=> 'Vagrantfile'
 fileLanguage('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
-
-// Or with fullExtensionName, falls back to fullExtensionName false and returns just the 
-// extension if could not find property with given extension name. Map file is on
-// `fileExtensionToLanguageMap.js`
-fileLanguage('', { fullExtensionName: true })
 ```
 
 ## API

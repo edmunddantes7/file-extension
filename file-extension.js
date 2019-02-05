@@ -1,7 +1,7 @@
 /*! file-extension v4.0.5 | (c) silverwind | BSD license */
 "use strict";
 
-const getExtension = 
+
 
 (function(m) {
   if (typeof exports === "object") {
@@ -18,7 +18,7 @@ const getExtension =
 		var ext = (/[^./\\]*$/.exec(filename) || [""])[0];
 		
 		const extensionsMap = require("./fileExtentsionToLanguageNameMap");
-		ext = (opts.languageName && ext in extensionsMap) ? extensionsMap[ext] : ext;
+		ext = ext in extensionsMap ? extensionsMap[ext] : ext;
 		ext = opts.preserveCase ? ext : ext.toLowerCase();		
 		return ext;
   };
