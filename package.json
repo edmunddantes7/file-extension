@@ -1,6 +1,6 @@
 {
   "name": "file-language",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get the language name of a given filename or path",
   "author": "Ramachandra junior <ramachandrajunior@gmail.com>",
   "repository": "https://github.com/edmunddantes7/file-language",

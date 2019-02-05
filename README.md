@@ -1,4 +1,6 @@
-# file-extension
+# file-language
+Fork of file-extension npm repository.
+
 [![](https://img.shields.io/npm/v/file-extension.svg?style=flat)](https://www.npmjs.org/package/file-extension) [![](https://img.shields.io/npm/dm/file-extension.svg)](https://www.npmjs.org/package/file-extension) [![](https://api.travis-ci.org/silverwind/file-extension.svg?style=flat)](https://travis-ci.org/silverwind/file-extension)
 > Get the extension of a given filename or path
 
@@ -9,44 +11,43 @@ Differences to [`path.extname`](https://nodejs.org/api/path.html#path_path_extna
 * Doesn't include the dot in the extension (`package.json` => `json`)
 * Returns lowercase by default (`LICENCE` => `licence`)
 
-Works in Node.js and the browser. The module's size is currently 267 bytes gzipped.
+Works in Node.js and the browser.
 
 ## Installation
 #### Node.js
 ```
-$ npm install --save file-extension
+$ npm install --save file-language
 ```
 #### Browser
 ```html
-<script src="file-extension.js"></script>
-<!-- Available as global `fileExtension` -->
+<script src="file-language.js"></script>
+<!-- Available as global `fileLanguage` -->
 ```
 ## Example
 ```js
-var fileExtension = require('file-extension'); // Skip this in the browser
+var fileLanguage = require('file-language'); // Skip this in the browser
 
 // Case insensitive
-fileExtension('file.zip');          //=> 'zip'
-fileExtension('.Dockerfile');       //=> 'dockerfile'
-fileExtension('file');              //=> 'file'
-fileExtension('.file.tar');         //=> 'tar'
+fileLanguage('file.zip');          //=> 'zip'
+fileLanguage('.Dockerfile');       //=> 'dockerfile'
+fileLanguage('file');              //=> 'file'
+fileLanguage('.file.tar');         //=> 'tar'
 
 // Or with case preserved
-fileExtension('.Vagrantfile', {preserveCase: true}); //=> 'Vagrantfile'
-fileExtension('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
+fileLanguage('.Vagrantfile', {preserveCase: true}); //=> 'Vagrantfile'
+fileLanguage('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
 
 // Or with fullExtensionName, falls back to fullExtensionName false and returns just the 
 // extension if could not find property with given extension name. Map file is on
 // `fileExtensionToLanguageMap.js`
-fileExtension('', { fullExtensionName: true })
+fileLanguage('', { fullExtensionName: true })
 ```
 
 ## API
-### fileExtension(filename, [options])
+### fileLanguage(filename, [options])
 - `filename` {String} The file name. Required.
 - `options` {Object} Options object.
 
 #### Options
 - `preserveCase` {Boolean} Whether case should be preserved. Default: false.
-
-© [silverwind](https://github.com/silverwind), distributed under BSD licence
+- `languageName` {Boolean} Return the language name. Default: false.
