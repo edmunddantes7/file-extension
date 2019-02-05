@@ -34,6 +34,11 @@ fileExtension('.file.tar');         //=> 'tar'
 // Or with case preserved
 fileExtension('.Vagrantfile', {preserveCase: true}); //=> 'Vagrantfile'
 fileExtension('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
+
+// Or with fullExtensionName, falls back to fullExtensionName false and returns just the 
+// extension if could not find property with given extension name. Map file is on
+// `fileExtensionToLanguageMap.js`
+fileExtension('', { fullExtensionName: true })
 ```
 
 ## API
