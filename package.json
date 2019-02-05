@@ -1,10 +1,10 @@
 {
-  "name": "file-extension",
-  "version": "4.0.5",
-  "description": "Get the extension of a given filename or path",
-  "author": "silverwind <me@silverwind.io> (https://github.com/silverwind)",
-  "repository": "silverwind/file-extension",
-  "license": "BSD-2-Clause",
+  "name": "file-language",
+  "version": "0.0.1",
+  "description": "Get the language name of a given filename or path",
+  "author": "Ramachandra junior <ramachandrajunior@gmail.com>",
+  "repository": "https://github.com/edmunddantes7/file-language",
+  "license": "NO LICENSE",
   "main": "file-extension.js",
   "scripts": {
     "test": "make test"
