@@ -17,7 +17,7 @@ const getExtension =
     if (!filename) return "";
 		var ext = (/[^./\\]*$/.exec(filename) || [""])[0];
 		
-		const extensionsMap = require("./fileExtentsionToFullNameMap");
+		const extensionsMap = require("./fileExtentsionToLanguageNameMap");
 		ext = (opts.fullExtensionName && ext in extensionsMap) ? extensionsMap[ext] : ext;
 		ext = opts.preserveCase ? ext : ext.toLowerCase();		
 		return ext;
